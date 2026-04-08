@@ -1,69 +1,205 @@
 /* Reset and basic styling */
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background: linear-gradient(135deg, #e8f5e8 0%, #f1f8e9 100%);
+    color: #333;
 }
 
 header {
-    background-color: #2c3e50;
+    background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
     color: white;
-    padding: 20px 0;
+    padding: 40px 20px;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     margin: 0;
+    font-size: 2.5em;
+    font-weight: 700;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 10px 0 0;
+    margin: 20px 0 0;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 1.1em;
+    padding: 10px 15px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 section {
-    padding: 40px 20px;
-    max-width: 1000px;
+    padding: 60px 20px;
+    max-width: 1200px;
     margin: auto;
 }
 
-h2 {
-    color: #2c3e50;
+#intro {
+    text-align: center;
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.trail, .gallery img {
+#intro h2 {
+    color: #4caf50;
+    font-size: 2em;
     margin-bottom: 20px;
 }
 
-.trail img, .gallery img {
+#intro p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+h2 {
+    color: #388e3c;
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#trails {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.trail {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trail:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.trail img {
     width: 100%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.trail h3 {
+    padding: 20px;
+    margin: 0;
+    color: #333;
+    font-size: 1.4em;
+}
+
+.trail p {
+    padding: 0 20px 20px;
+    margin: 0;
+    color: #666;
+    font-weight: 500;
+}
+
+#gallery {
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    justify-content: center;
+}
+
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+#contact {
+    text-align: center;
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 1.1em;
+}
+
+#contact a {
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#contact a:hover {
+    text-decoration: underline;
 }
 
 footer {
     text-align: center;
-    padding: 20px 0;
-    background-color: #2c3e50;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #388e3c 0%, #2e7d32 100%);
     color: white;
+    font-size: 1.1em;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    section {
+        padding: 40px 15px;
+    }
+
+    #trails {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
 }

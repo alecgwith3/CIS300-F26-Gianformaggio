@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+local-hikes-hub/
+│
+├─ index.html
+├─ css/
+│   └─ style.css
+└─ images/
+    └─ (put all your hiking photos here)
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,30 +26,30 @@
     </header>
 
     <section id="intro">
-        <h2>Discover the Best Local Trails</h2>
-        <p>Explore your area with detailed trail guides, maps, and hiking tips.</p>
+        <h2>Discover Local Hiking Trails</h2>
+        <p>Explore nearby trails, see photos, and find tips for your next adventure.</p>
     </section>
 
     <section id="trails">
         <h2>Featured Trails</h2>
         <div class="trail">
             <img src="images/trail1.jpg" alt="Trail 1">
-            <h3>Trail Name 1</h3>
+            <h3>Sunset Trail</h3>
             <p>Distance: 5 miles | Difficulty: Moderate</p>
         </div>
         <div class="trail">
             <img src="images/trail2.jpg" alt="Trail 2">
-            <h3>Trail Name 2</h3>
+            <h3>Forest Path</h3>
             <p>Distance: 3 miles | Difficulty: Easy</p>
         </div>
-        <!-- Add more trails here -->
+        <!-- Add more trails as needed -->
     </section>
 
     <section id="gallery">
         <h2>Photo Gallery</h2>
         <div class="gallery">
-            <img src="images/photo1.jpg" alt="Hiking photo 1">
-            <img src="images/photo2.jpg" alt="Hiking photo 2">
+            <img src="images/photo1.jpg" alt="Hiking Photo 1">
+            <img src="images/photo2.jpg" alt="Hiking Photo 2">
             <!-- Add more photos here -->
         </div>
     </section>
@@ -57,3 +64,73 @@
     </footer>
 </body>
 </html>
+/* Basic Reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.trail, .gallery img {
+    margin-bottom: 20px;
+}
+
+.trail img, .gallery img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #2c3e50;
+    color: white;
+}
