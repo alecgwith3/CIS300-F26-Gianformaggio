@@ -1,169 +1,219 @@
-/* Reset and basic styling */
+/* Reset and Base Styles */
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
     line-height: 1.6;
-    background: linear-gradient(135deg, #e8f5e8 0%, #f1f8e9 100%);
     color: #333;
+    background-color: #f8f9fa;
 }
 
+/* Header */
 header {
-    background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
-    color: white;
-    padding: 40px 20px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(34, 139, 34, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.5em;
+    color: white;
+    font-size: 1.8rem;
     font-weight: 700;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0 0;
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    list-style: none;
+    gap: 2rem;
 }
 
-nav ul li a {
+nav a {
     color: white;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1em;
-    padding: 10px 15px;
-    border-radius: 25px;
-    transition: background-color 0.3s ease;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+nav a:hover {
+    color: #e8f5e8;
 }
 
-section {
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: auto;
-}
-
-#intro {
+/* Hero Section */
+#hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/trail1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    background: white;
-    border-radius: 15px;
-    padding: 40px;
-    margin-bottom: 40px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    color: white;
 }
 
-#intro h2 {
-    color: #4caf50;
-    font-size: 2em;
-    margin-bottom: 20px;
+.hero-content {
+    max-width: 800px;
+    padding: 2rem;
 }
 
-#intro p {
-    font-size: 1.2em;
-    color: #666;
+.hero-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+    display: inline-block;
+    background: #4CAF50;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.btn:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+}
+
+/* Sections */
+section {
+    padding: 5rem 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 h2 {
-    color: #388e3c;
-    font-size: 2.2em;
-    margin-bottom: 30px;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
     text-align: center;
+    color: #2E7D32;
+    position: relative;
 }
 
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #4CAF50;
+    margin: 1rem auto;
+    border-radius: 2px;
+}
+
+/* About Section */
+#about {
+    background: white;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#about p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Trails Section */
 #trails {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    background: #f1f8e9;
 }
 
-.trail {
+.trails-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.trail-card {
     background: white;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.trail:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+.trail-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
-.trail img {
+.trail-card img {
     width: 100%;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
 }
 
-.trail h3 {
-    padding: 20px;
-    margin: 0;
-    color: #333;
-    font-size: 1.4em;
+.trail-info {
+    padding: 2rem;
 }
 
-.trail p {
-    padding: 0 20px 20px;
-    margin: 0;
+.trail-info h3 {
+    color: #2E7D32;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.trail-info p {
+    margin-bottom: 0.5rem;
     color: #666;
-    font-weight: 500;
 }
 
-#gallery {
-    background: white;
-    border-radius: 15px;
-    padding: 40px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+.trail-info p:last-child {
+    font-style: italic;
 }
 
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.gallery img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-.gallery img:hover {
-    transform: scale(1.05);
-}
-
+/* Contact Section */
 #contact {
-    text-align: center;
     background: white;
-    border-radius: 15px;
-    padding: 40px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 #contact h2 {
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
 }
 
 #contact p {
-    font-size: 1.1em;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
 }
 
 #contact a {
-    color: #4caf50;
+    color: #4CAF50;
     text-decoration: none;
     font-weight: 600;
 }
@@ -172,34 +222,46 @@ h2 {
     text-decoration: underline;
 }
 
+/* Footer */
 footer {
-    text-align: center;
-    padding: 30px 20px;
-    background: linear-gradient(135deg, #388e3c 0%, #2e7d32 100%);
+    background: #2E7D32;
     color: white;
-    font-size: 1.1em;
+    text-align: center;
+    padding: 2rem 0;
 }
 
-/* Responsive design */
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2em;
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
     }
 
     nav ul {
-        flex-direction: column;
-        gap: 10px;
+        gap: 1rem;
     }
 
-    section {
-        padding: 40px 15px;
+    .hero-content h2 {
+        font-size: 2.5rem;
     }
 
-    #trails {
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .trails-grid {
         grid-template-columns: 1fr;
     }
 
-    .gallery {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    h2 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 3rem 0;
     }
 }
