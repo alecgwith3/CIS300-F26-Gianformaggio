@@ -3,77 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Local Hikes Hub</title>
+    <title>Sunset Escapes</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Local Hikes Hub</h1>
-        <nav>
-            <ul>
-                <li><a href="#trails">Trails</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="#">Sunset Escapes</a>
+            <nav class="site-nav">
+                <a href="#destinations">Destinations</a>
+                <a href="#store">Store</a>
+                <a href="#about">About</a>
+                <a href="#more">More</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
     </header>
 
-    <section id="intro">
-        <h2>Discover the Best Local Trails</h2>
-        <p>Explore your area with detailed trail guides, maps, and hiking tips.</p>
-    </section>
-
-    <section id="trails">
-        <h2>Featured Trails</h2>
-        <div class="trail">
-            <img src="images/trail1.jpg" alt="Trail 1">
-            <h3>Trail Name 1</h3>
-            <p>Distance: 1 mile | Difficulty: Easy</p>
-        </div>
-        <div class="trail">
-            <img src="images/trail2.jpg" alt="Trail 2">
-            <h3>Trail Name 2</h3>
-            <p>Distance: 3.3 miles | Difficulty: Very Hard</p>
-        </div>
-        <div class="trail">
-            <img src="images/trail3.jpg" alt="Pietswa Peak">
-            <h3>Pietswa Peak</h3>
-            <p>Distance: 2.5 miles | Difficulty: Moderate</p>
-        </div>
-        <div class="trail">
-            <img src="images/trail1.jpg" alt="Raven Ridge">
-            <h3>Raven Ridge</h3>
-            <p>Distance: 4 miles | Difficulty: Moderate</p>
-        </div>
-        <div class="trail">
-            <img src="images/trail2.jpg" alt="Maple Loop">
-            <h3>Maple Loop</h3>
-            <p>Distance: 2 miles | Difficulty: Easy</p>
-        </div>
-        <div class="trail">
-            <img src="images/trail3.jpg" alt="Sunset Summit">
-            <h3>Sunset Summit</h3>
-            <p>Distance: 5.2 miles | Difficulty: Hard</p>
-        </div>
-        <!-- Add more trails here -->
-    </section>
-
-    <section id="gallery">
-        <h2>Photo Gallery</h2>
-        <div class="gallery">
-            <img src="images/photo1.jpg" alt="Hiking photo 1">
-            <img src="images/photo2.jpg" alt="Hiking photo 2">
-            <!-- Add more photos here -->
+    <section class="hero">
+        <div class="container hero-copy">
+            <p class="eyebrow">Travel made effortless</p>
+            <h1>Discover calm coastlines and vibrant city retreats.</h1>
+            <p>Plan your next getaway with curated escapes, travel inspiration, and a fresh coastal color palette.</p>
+            <a class="btn btn-primary" href="#destinations">See Destinations</a>
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+    <section id="destinations" class="section destinations">
+        <div class="container">
+            <h2>Featured Destinations</h2>
+            <div class="cards">
+                <article class="card">
+                    <img src="images/trail1.jpg" alt="Ocean view lodge">
+                    <div class="card-body">
+                        <h3>Harbor Point</h3>
+                        <p>Relax in a seaside retreat with walking paths, sunset dining, and ocean breeze.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="images/trail2.jpg" alt="Boutique city stay">
+                    <div class="card-body">
+                        <h3>City Lights Loft</h3>
+                        <p>Stay in a vibrant urban loft near local markets, galleries, and rooftop views.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="images/trail3.jpg" alt="Coastal villa">
+                    <div class="card-body">
+                        <h3>Coastal Cove Villa</h3>
+                        <p>Enjoy a quiet villa escape set above the shore, with panoramic views and soft sea air.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Local Hikes Hub</p>
+    <section id="store" class="section store">
+        <div class="container">
+            <h2>Store</h2>
+            <p>Find curated travel gear and getaway essentials to bring your escape to life.</p>
+            <div class="store-grid">
+                <article class="store-card">
+                    <img src="images/trail1.jpg" alt="Travel journal">
+                    <div class="store-card-body">
+                        <h3>Travel Journal</h3>
+                        <p>Capture every sunset and shoreline memory with a premium softcover journal.</p>
+                        <a class="btn btn-secondary" href="#contact">Shop Now</a>
+                    </div>
+                </article>
+                <article class="store-card">
+                    <img src="images/trail2.jpg" alt="Beach tote bag">
+                    <div class="store-card-body">
+                        <h3>Beach Tote</h3>
+                        <p>Carry everything you need for a coastal day with this lightweight travel tote.</p>
+                        <a class="btn btn-secondary" href="#contact">Shop Now</a>
+                    </div>
+                </article>
+                <article class="store-card">
+                    <img src="images/trail3.jpg" alt="Travel package">
+                    <div class="store-card-body">
+                        <h3>Weekend Getaway Pack</h3>
+                        <p>Bundle essentials for an easy trip, including a guidebook and travel accessories.</p>
+                        <a class="btn btn-secondary" href="#contact">Shop Now</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section about">
+        <div class="container">
+            <h2>About Sunset Escapes</h2>
+            <p>Sunset Escapes helps travelers find memorable stays in coastal towns, mountain resorts, and boutique escapes. With easy planning tools, inspiring stories, and a modern look, every trip feels refreshed.</p>
+        </div>
+    </section>
+
+    <section id="more" class="section more">
+        <div class="container">
+            <h2>More Options</h2>
+            <p>Choose one of the optional travel extras below to tailor your next adventure.</p>
+            <div class="option-grid">
+                <a class="option-card" href="#tips">
+                    <h3>Travel Tips</h3>
+                    <p>Quick advice for packing, planning, and making the most of every trip.</p>
+                </a>
+                <a class="option-card" href="#giftcards">
+                    <h3>Gift Cards</h3>
+                    <p>Share a thoughtful getaway with friends and family using a Sunset Escapes gift card.</p>
+                </a>
+                <a class="option-card" href="#events">
+                    <h3>Local Events</h3>
+                    <p>Discover concerts, festivals, and weekend experiences happening near your destination.</p>
+                </a>
+            </div>
+            <div class="option-details">
+                <article id="tips" class="option-panel">
+                    <h3>Travel Tips</h3>
+                    <p>Pack smart with versatile clothing, book smaller experiences early, and leave room for spontaneous adventures.</p>
+                </article>
+                <article id="giftcards" class="option-panel">
+                    <h3>Gift Cards</h3>
+                    <p>Perfect for giving friends and family the freedom to choose their next retreat.</p>
+                </article>
+                <article id="events" class="option-panel">
+                    <h3>Local Events</h3>
+                    <p>From sunset markets to outdoor concerts, enjoy memorable activities while you travel.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Ready to start your next getaway? Send us a message.</p>
+            <p>Email: <a href="mailto:hello@sunsetescapes.com">hello@sunsetescapes.com</a></p>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Sunset Escapes. Designed for unwinders.</p>
+        </div>
     </footer>
 </body>
 </html>
